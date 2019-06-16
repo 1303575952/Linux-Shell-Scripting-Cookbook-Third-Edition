@@ -9,30 +9,31 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MemoryController {
-	
-	private List<User>  userList = new ArrayList<User>();
-	private List<Class<?>>  classList = new ArrayList<Class<?>>();
-	
-	/**
-	 * -Xmx32M -Xms32M
-	 * */
-	@GetMapping("/heap")
-	public String heap() {
-		int i=0;
-		while(true) {
-			userList.add(new User(i++, UUID.randomUUID().toString()));
-		}
-	}
-	
-	
-	/**
-	 * -XX:MetaspaceSize=32M -XX:MaxMetaspaceSize=32M
-	 * */
-	@GetMapping("/nonheap")
-	public String nonheap() {
-		while(true) {
-			classList.addAll(Metaspace.createClasses());
-		}
-	}
-	
+
+    private List<User> userList = new ArrayList<User>();
+    private List<Class<?>> classList = new ArrayList<Class<?>>();
+
+    /**
+     * -Xmx32M -Xms32M
+     * -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./
+     */
+    @GetMapping("/heap")
+    public String heap() {
+        int i = 0;
+        while (true) {
+            userList.add(new User(i++, UUID.randomUUID().toString()));
+        }
+    }
+
+
+    /**
+     * -XX:MetaspaceSize=32M -XX:MaxMetaspaceSize=32M
+     */
+    @GetMapping("/nonheap")
+    public String nonheap() {
+        while (true) {
+            classList.addAll(Metaspace.createClasses());
+        }
+    }
+
 }

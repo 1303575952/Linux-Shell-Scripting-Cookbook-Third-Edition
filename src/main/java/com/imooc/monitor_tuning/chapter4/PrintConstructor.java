@@ -1,15 +1,17 @@
 package com.imooc.monitor_tuning.chapter4;
+/*
 import com.sun.btrace.AnyType;
 import com.sun.btrace.BTraceUtils;
 import com.sun.btrace.annotations.BTrace;
 import com.sun.btrace.annotations.OnMethod;
 import com.sun.btrace.annotations.ProbeClassName;
 import com.sun.btrace.annotations.ProbeMethodName;
+*/
 
-@BTrace
+//@BTrace
 public class PrintConstructor {
 	
-	@OnMethod(
+/*	@OnMethod(
 	        clazz="com.imooc.monitor_tuning.chapter2.User",
 	        method="<init>"
 	)
@@ -17,5 +19,5 @@ public class PrintConstructor {
 		BTraceUtils.println(pcn+","+pmn);
 		BTraceUtils.printArray(args);
 		BTraceUtils.println();
-    }
+    }*/
 }

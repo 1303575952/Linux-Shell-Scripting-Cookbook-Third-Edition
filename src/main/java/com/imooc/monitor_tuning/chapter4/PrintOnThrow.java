@@ -24,6 +24,7 @@
  */
 
 package com.imooc.monitor_tuning.chapter4;
+/*
 
 import com.sun.btrace.BTraceUtils;
 import com.sun.btrace.annotations.BTrace;
@@ -32,13 +33,14 @@ import com.sun.btrace.annotations.Location;
 import com.sun.btrace.annotations.OnMethod;
 import com.sun.btrace.annotations.Self;
 import com.sun.btrace.annotations.TLS;
+*/
 
-@BTrace 
+//@BTrace
 public class PrintOnThrow {    
     // store current exception in a thread local
     // variable (@TLS annotation). Note that we can't
     // store it in a global variable!
-    @TLS 
+    /*@TLS
     static Throwable currentException;
 
     // introduce probe into every constructor of java.lang.Throwable
@@ -88,5 +90,5 @@ public class PrintOnThrow {
         	BTraceUtils.println("=====================");
             currentException = null;
         }
-    }
+    }*/
 }

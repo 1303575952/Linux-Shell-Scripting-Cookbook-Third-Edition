@@ -1,4 +1,5 @@
 package com.imooc.monitor_tuning.chapter4;
+/*
 import java.lang.reflect.Field;
 
 import com.imooc.monitor_tuning.chapter2.User;
@@ -9,11 +10,12 @@ import com.sun.btrace.annotations.Location;
 import com.sun.btrace.annotations.OnMethod;
 import com.sun.btrace.annotations.ProbeClassName;
 import com.sun.btrace.annotations.ProbeMethodName;
+*/
 
-@BTrace
+//@BTrace
 public class PrintArgComplex {
 	
-	
+/*
 	@OnMethod(
 	        clazz="com.imooc.monitor_tuning.chapter4.Ch4Controller",
 	        method="arg2",
@@ -27,5 +29,5 @@ public class PrintArgComplex {
 		BTraceUtils.println(BTraceUtils.get(filed2, user));
 		BTraceUtils.println(pcn+","+pmn);
 		BTraceUtils.println();
-    }
+    }*/
 }
